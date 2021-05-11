@@ -1,0 +1,7 @@
+{
+  "name": "AppUdemy",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

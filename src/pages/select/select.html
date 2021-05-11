@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>select</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Bandas</ion-label>
+    <ion-select>
+      <ion-option value="P">A7x</ion-option>
+      <ion-option value="F">FFDP</ion-option>
+      <ion-option value="M">Metallica</ion-option>
+      <ion-option value="K">Korn</ion-option>
+      <ion-option value="M">Muse</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Musicas checkbox</ion-label>
+    <ion-select multiple="true" cancelText="Cancelar" okText="teste">
+      <ion-option value="P">A7x</ion-option>
+      <ion-option value="F">FFDP</ion-option>
+      <ion-option value="M">Metallica</ion-option>
+      <ion-option value="K">Korn</ion-option>
+      <ion-option value="M">Muse</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Musicas checkbox</ion-label>
+    <ion-select multiple="true" disabled cancelText="Cancelar" okText="teste">
+      <ion-option value="P">A7x</ion-option>
+      <ion-option value="F">FFDP</ion-option>
+      <ion-option value="M">Metallica</ion-option>
+      <ion-option value="K">Korn</ion-option>
+      <ion-option value="M">Muse</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Musicas checkbox</ion-label>
+    <ion-select [selectOptions]="selectOptions">
+      <ion-option value="P">A7x</ion-option>
+      <ion-option value="F">FFDP</ion-option>
+      <ion-option value="M">Metallica</ion-option>
+      <ion-option value="K">Korn</ion-option>
+      <ion-option value="M">Muse</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Action-Sheet</ion-label>
+      <ion-select interface="action-sheet" >
+        <ion-option value="B">BloodBorne</ion-option>
+        <ion-option value="H">Horizon Zero Dawn</ion-option>
+        <ion-option value="W">CoD Warzone</ion-option>
+        <ion-option value="G">Guitar Hero 3</ion-option>
+      </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Popover</ion-label>
+      <ion-select interface="popover" >
+        <ion-option value="B">BloodBorne</ion-option>
+        <ion-option value="H">Horizon Zero Dawn</ion-option>
+        <ion-option value="W">CoD Warzone</ion-option>
+        <ion-option value="G">Guitar Hero 3</ion-option>
+      </ion-select>
+  </ion-item>
+</ion-content>

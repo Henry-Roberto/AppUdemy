@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item-sliding #item>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="https://scontent.fumu1-1.fna.fbcdn.net/v/t1.0-9/46513927_2059647257482978_740598313409052672_o.jpg?_nc_cat=108&ccb=2&_nc_sid=09cbfe&_nc_eui2=AeGS3ovSe-QkYHA66Sj4pPNKwGSiVsSbx97AZKJWxJvH3k_YSMyixAE-1CflTTNO2FpSqPkVCrbvAhEx1CQBA2L3&_nc_ohc=LnaU2oEURfsAX9V71wa&_nc_ht=scontent.fumu1-1.fna&oh=f88c8d11b42f55d784b49b35e45516b9&oe=60440255">
+        </ion-avatar>
+        Item sliding
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button (click)="favorite(item)">Favorite</button>
+        <button ion-button color="danger" (click)="share(item)">Share</button>
+      </ion-item-options>
+  
+      <ion-item-options side="right">
+        <button ion-button (click)="unread(item)">Unread</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  
+  <ion-list no-lines> 
+    <ion-list-header>Frutas</ion-list-header>
+    <ion-item *ngFor="let item of itens" (click)="selecinarItem(item)" >
+      <ion-icon name="leaf" item-start></ion-icon>
+      {{item}}
+      <ion-badge item-end>100</ion-badge>
+    </ion-item>
+  </ion-list>
+
+  <ion-list no-lines>
+    <ion-label>Botões</ion-label>
+    <button ion-item *ngFor="let item of itens" (click)="selecinarItem(item)" >
+      {{item}}
+    </button>
+  </ion-list>
+
+  <ion-item-group>
+    <ion-item-divider color="light">A</ion-item-divider>
+    <ion-item >Angola</ion-item>
+    <ion-item >Argentina</ion-item>
+    <ion-item >Brasil</ion-item>
+  </ion-item-group>
+
+  <ion-list >
+    <ion-item *ngFor="let item of itens" (click)="selecinarItem(item)" >
+      <ion-avatar item-left>
+        <img src="https://scontent.fumu1-1.fna.fbcdn.net/v/t1.0-9/46513927_2059647257482978_740598313409052672_o.jpg?_nc_cat=108&ccb=2&_nc_sid=09cbfe&_nc_eui2=AeGS3ovSe-QkYHA66Sj4pPNKwGSiVsSbx97AZKJWxJvH3k_YSMyixAE-1CflTTNO2FpSqPkVCrbvAhEx1CQBA2L3&_nc_ohc=LnaU2oEURfsAX9V71wa&_nc_ht=scontent.fumu1-1.fna&oh=f88c8d11b42f55d784b49b35e45516b9&oe=60440255">
+      </ion-avatar>
+      <h2>{{item}}</h2>
+      <p>Carne é melhor</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list >
+    <ion-item >
+      <ion-thumbnail item-start>
+        <img src="https://scontent.fumu1-1.fna.fbcdn.net/v/t1.0-9/46513927_2059647257482978_740598313409052672_o.jpg?_nc_cat=108&ccb=2&_nc_sid=09cbfe&_nc_eui2=AeGS3ovSe-QkYHA66Sj4pPNKwGSiVsSbx97AZKJWxJvH3k_YSMyixAE-1CflTTNO2FpSqPkVCrbvAhEx1CQBA2L3&_nc_ohc=LnaU2oEURfsAX9V71wa&_nc_ht=scontent.fumu1-1.fna&oh=f88c8d11b42f55d784b49b35e45516b9&oe=60440255">
+      </ion-thumbnail>
+      <h2>Henry Roberto</h2>
+      <p>Aprendendo a desenvolver</p>
+      <button ion-button clear item-end>Curtir</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

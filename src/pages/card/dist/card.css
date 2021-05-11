@@ -1,0 +1,23 @@
+page-card ion-card {
+  position: relative;
+  text-align: center;
+}
+page-card .titulo-card {
+  position: absolute;
+  top: 36%;
+  font-size: 2em;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 10px red;
+}
+page-card .subtitulo-card {
+  font-size: 1em;
+  position: absolute;
+  top: 62%;
+  width: 100%;
+  color: #fff;
+}
+page-card .bt-whats:hover {
+  background-color: #29901c;
+}

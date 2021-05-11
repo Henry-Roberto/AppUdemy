@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>storage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list >
+    <ion-item>
+      <button ion-button block (click)="botao1()">botao1</button>
+    </ion-item>
+    <ion-item>
+      <button ion-button block (click)="botao2()">botao2</button>
+    </ion-item>
+  </ion-list>
+
+  <p *ngIf="ultimoBotaoPressionado">
+    Ultimo votão pressionado {{ultimoBotaoPressionado}}
+  </p>
+</ion-content>

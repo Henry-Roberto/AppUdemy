@@ -1,0 +1,48 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>segment</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div padding>
+      <ion-segment [(ngModel)]="game">
+        <ion-segment-button value="cod">
+          Warzone
+        </ion-segment-button>
+        <ion-segment-button value="bloodborne">
+          BloodBorne
+        </ion-segment-button>
+        <ion-segment-button value="hzd">
+          Horizon Zero Dawn
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div [ngSwitch]="game">
+      <ion-list *ngSwitchCase="'cod'" >
+        <ion-item no-lines>
+          <!-- <ion-thumbnail item start> -->
+            <img src="https://store-images.s-microsoft.com/image/apps.46452.13835473807186336.9510cd97-f71a-49b0-9e5c-0877f4bc9de3.611f3905-926e-456a-b549-6b68564b2769" alt="">
+          <!-- </ion-thumbnail> -->
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'bloodborne'">
+        <ion-item no-lines>
+          <!-- <ion-thumbnail item start> -->
+            <img src="https://upload.wikimedia.org/wikipedia/pt/2/29/Bloodborne_capa.png" alt="">
+          <!-- </ion-thumbnail> -->
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'hzd'">
+        <ion-item no-lines>
+          <!-- <ion-thumbnail item start> -->
+            <img src="https://image.api.playstation.com/vulcan/img/rnd/202009/2923/jAT7HjpL49A62bU7hLKXJ96b.png" alt="">
+          <!-- </ion-thumbnail> -->
+        </ion-item>
+      </ion-list>
+    </div>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="violet">
+    <ion-title>Busca CEP</ion-title>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding-left>
+  <ion-list>
+    <ion-item >
+      <ion-label stacked>Cep</ion-label>
+      <ion-input id="test" type="text" [(ngModel)]="cepDigitado" placeholder="Digite um cep válido" autofocus="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button block (click)="consultarEnderecoPeloCep()">Consultar CEP</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="itens">
+    <ion-label>Informações do CEP: {{infoCep.cep}}</ion-label>
+    <ion-label stacked>Cidade:</ion-label>
+    <ion-item >{{infoCep.localidade}}</ion-item>
+    <ion-label stacked>UF:</ion-label>
+    <ion-item >{{infoCep.uf}}</ion-item>
+    <ion-label stacked>Logradouro:</ion-label>
+    <ion-item >{{infoCep.logradouro}}</ion-item>
+    <ion-label stacked>Bairro:</ion-label>
+    <ion-item >{{infoCep.bairro}}</ion-item>
+    <ion-label stacked>Complemento:</ion-label>
+    <ion-item >{{infoCep.complemento}}</ion-item>
+    <ion-label stacked>IBGE:</ion-label>
+    <ion-item >{{infoCep.ibge}}</ion-item>
+    <ion-label stacked>DDD:</ion-label>
+    <ion-item >{{infoCep.ddd}}</ion-item>
+  </ion-list>
+</ion-content>

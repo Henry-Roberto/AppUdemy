@@ -1,0 +1,27 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Toggle</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  {{teste}}
+  <ion-list >
+      <ion-item>
+        <ion-label>Ativo</ion-label>
+        <ion-toggle checked="true" [(ngModel)]="teste"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Ativo vermelho</ion-label>
+        <ion-toggle checked="true" color="danger"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Ativo desativiado</ion-label>
+        <ion-toggle disabled color="danger"></ion-toggle>
+      </ion-item>
+  </ion-list>
+
+</ion-content>
