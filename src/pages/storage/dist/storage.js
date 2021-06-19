@@ -13,22 +13,6 @@ var StoragePage = /** @class */ (function () {
     function StoragePage(storage) {
         this.storage = storage;
     }
-    StoragePage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.storage.get("ultimoBotaoPressionado").then(function (valor) {
-            _this.ultimoBotaoPressionado = valor;
-        });
-    };
-    StoragePage.prototype.botao1 = function () {
-        this.storage.set('ultimoBotaoPressionado', 1);
-        //javascript
-        localStorage.setItem('opcao', '1');
-    };
-    StoragePage.prototype.botao2 = function () {
-        this.storage.set('ultimoBotaoPressionado', 2);
-        //javascript
-        localStorage.setItem('opcao', '2');
-    };
     StoragePage = __decorate([
         ionic_angular_1.IonicPage(),
         core_1.Component({

@@ -10,18 +10,23 @@ exports.ModalConteudoPage = void 0;
 var core_1 = require("@angular/core");
 var ionic_angular_1 = require("ionic-angular");
 var ModalConteudoPage = /** @class */ (function () {
-    function ModalConteudoPage(navParams) {
+    function ModalConteudoPage(navParams, viewCtrl) {
         this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
         this.usuarios = [{
                 nome: "",
                 idade: 0
             }];
         this.usuarios = this.navParams.get("usuarios");
         console.log(this.usuarios);
-        var data = new Date('4 17 2021');
-        var diaDaSemana = data.getDay();
-        console.log(diaDaSemana);
     }
+    ModalConteudoPage.prototype.fecharModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    ModalConteudoPage.prototype.FecharModalComParametros = function () {
+        var param = "Henry R";
+        this.viewCtrl.dismiss(param);
+    };
     ModalConteudoPage = __decorate([
         ionic_angular_1.IonicPage(),
         core_1.Component({

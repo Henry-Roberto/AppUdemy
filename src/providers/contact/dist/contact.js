@@ -6,55 +6,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.ContactList = exports.Contact = exports.ContactProvider = void 0;
+exports.ContactProvider = void 0;
 var core_1 = require("@angular/core");
 var ContactProvider = /** @class */ (function () {
-    function ContactProvider(storage, datePipe) {
-        this.storage = storage;
-        this.datePipe = datePipe;
+    function ContactProvider( /*private storage: Storage,
+                private datePipe: DatePipe*/) {
     }
-    ContactProvider.prototype.insert = function (contact) {
-        var key = this.datePipe.transform(new Date(), "ddMMyyyyHHmmss");
-        return this.save(key, contact);
-    };
-    ContactProvider.prototype.update = function (key, contact) {
-        return this.save(key, contact);
-    };
-    ContactProvider.prototype.save = function (key, contact) {
-        return this.storage.set(key, contact);
-    };
-    ContactProvider.prototype.remove = function (key) {
-        return this.storage.remove(key);
-    };
-    ContactProvider.prototype.getAll = function () {
-        var contacts = [];
-        return this.storage.forEach(function (value, key, iterationNumber) {
-            var contact = new ContactList();
-            contact.key = key;
-            contact.contact = value;
-            contacts.push(contact);
-        })
-            .then(function () {
-            return Promise.resolve(contacts);
-        })["catch"](function (error) {
-            return Promise.reject(error);
-        });
-    };
     ContactProvider = __decorate([
         core_1.Injectable()
     ], ContactProvider);
     return ContactProvider;
 }());
 exports.ContactProvider = ContactProvider;
-var Contact = /** @class */ (function () {
-    function Contact() {
-    }
-    return Contact;
-}());
-exports.Contact = Contact;
-var ContactList = /** @class */ (function () {
-    function ContactList() {
-    }
-    return ContactList;
-}());
-exports.ContactList = ContactList;
+// export class Contact {
+//   name: string;
+//   phone: number;
+//   birth: Date;
+//   active: boolean;
+// }
+// export class ContactList {
+//   key: string;
+//   contact: Contact;
+// }

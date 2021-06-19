@@ -13,24 +13,24 @@ export class StoragePage {
   constructor(private storage: Storage) {
   }
 
-  ionViewDidLoad() {
-    this.storage.get("ultimoBotaoPressionado").then((valor) => {
-    this.ultimoBotaoPressionado = valor;
-    });
-  }
+  // ionViewDidLoad() {
+  //   this.storage.get("ultimoBotaoPressionado").then((valor) => {
+  //   this.ultimoBotaoPressionado = valor;
+  //   });
+  // }
 
-  botao1(){
-    this.storage.set('ultimoBotaoPressionado', 1);
+  // botao1(){
+  //   this.storage.set('ultimoBotaoPressionado', 1);
     
-    //javascript
-    localStorage.setItem('opcao', '1');
-  }
+  //   //javascript
+  //   localStorage.setItem('opcao', '1');
+  // }
 
-  botao2(){
-    this.storage.set('ultimoBotaoPressionado', 2);
+  // botao2(){
+  //   this.storage.set('ultimoBotaoPressionado', 2);
 
-     //javascript
-     localStorage.setItem('opcao', '2');
-  }
+  //    //javascript
+  //    localStorage.setItem('opcao', '2');
+  // }
 
 }

@@ -55,4 +55,6 @@ export class ModalPrincipalPage {
     this.modalCtrl.create(ModalConteudoPage, {usuarios: this.usuarios}).present();      
   }
 
+  
+
 }

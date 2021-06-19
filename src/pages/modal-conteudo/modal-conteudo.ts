@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -13,12 +13,23 @@ export class ModalConteudoPage {
     idade: 0 
   }];
 
-  constructor(public navParams: NavParams) {
+  constructor(public navParams: NavParams, 
+              public viewCtrl: ViewController) {
     this.usuarios = this.navParams.get("usuarios");
     console.log(this.usuarios);
-    
   }
-  
+
+
+  fecharModal(){
+    this.viewCtrl.dismiss();
+  }
+
+  FecharModalComParametros() {
+    let param = "Henry R";
+
+    this.viewCtrl.dismiss(param);
+
+  }
 
 
 }

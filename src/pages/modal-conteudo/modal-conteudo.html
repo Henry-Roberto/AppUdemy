@@ -1,11 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>ModalConteudo</ion-title>
-  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-title>Modal Conteudo</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="fecharModal()" edge>
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
+
 <ion-content padding>
-  <ion-list  *ngFor="let item of usuarios">
+  <ion-list *ngFor="let item of usuarios">
     <ion-item>
       {{item.nome}}
     </ion-item>
@@ -13,5 +19,6 @@
       {{item.idade}}
     </ion-item>
   </ion-list>
-  
+  <button ion-button block (click)="FecharModalComParametros"> Fechar Modal com parametros</button>
+
 </ion-content>
