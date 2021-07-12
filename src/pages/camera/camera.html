@@ -1,0 +1,12 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Camera</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button tooltip="I'm a tooltip below a button" positionV="bottom" (click)="tirarFoto()" ion-button block>TIRAR FOTO</button>
+
+  <img [hidden]="!foto" src="{{foto}}" alt="">
+</ion-content>

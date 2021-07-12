@@ -1,3 +1,10 @@
+import { DocumentViewer } from '@ionic-native/document-viewer';
+import { TestePdfPage } from './../pages/teste-pdf/teste-pdf';
+import { CameraPage } from '../pages/camera/camera';
+import { SMS } from '@ionic-native/sms';
+import { EstilizacaoPage } from './../pages/estilizacao/estilizacao';
+import { PopoverPage } from './../pages/popover/popover';
+import { SlidesPage } from './../pages/slides/slides';
 import { ModalPrincipalPage } from './../pages/modal-principal/modal-principal';
 import { ModalConteudoPage } from './../pages/modal-conteudo/modal-conteudo';
 import { HomeContactPage } from './../pages/home-contact/home-contact';
@@ -43,6 +50,7 @@ import { from } from 'rxjs/observable/from';
 import { IonicStorageModule } from '@ionic/storage';
 import { DatePipe } from '@angular/common'; //FORMATAR OS DADOS
 import { ContactProvider } from '../providers/contact/contact';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -77,13 +85,18 @@ import { ContactProvider } from '../providers/contact/contact';
     StoragePage,
     HomeContactPage,
     ModalConteudoPage,
-    ModalPrincipalPage
+    ModalPrincipalPage,
+    SlidesPage,
+    PopoverPage,
+    EstilizacaoPage,
+    CameraPage,
+    TestePdfPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp, {mode: 'ios'}), //manter o layout igual em todas as plataformas
-    IonicStorageModule.forRoot()
+    // IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -118,7 +131,12 @@ import { ContactProvider } from '../providers/contact/contact';
     StoragePage,
     HomeContactPage,
     ModalConteudoPage,
-    ModalPrincipalPage
+    ModalPrincipalPage,
+    SlidesPage,
+    PopoverPage,
+    EstilizacaoPage,
+    CameraPage,
+    TestePdfPage
   ],
   providers: [
     StatusBar,
@@ -126,7 +144,9 @@ import { ContactProvider } from '../providers/contact/contact';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CepProvider,
     ContactProvider,
-    DatePipe
+    DatePipe,
+    SMS,
+    DocumentViewer
   ]
 })
 export class AppModule {}

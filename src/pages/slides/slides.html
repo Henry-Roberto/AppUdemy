@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Slides</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding scrollX="false">
+  <ion-slides loop="true" style="border-radius: 15px; height: 90%;" pager>
+    <ion-slide class="slides">
+      <img class="slides" src="../../assets/slides/1.jpg" alt="">
+    </ion-slide>
+    <ion-slide class="slides">
+      <img class="slides" src="../../assets/slides/2.jpg" alt="">
+    </ion-slide>
+    <ion-slide class="slides">
+      <img class="slides" src="../../assets/slides/3.jpg" alt="">
+    </ion-slide>
+    <ion-slide class="slides">
+      <img class="slides" src="../../assets/slides/4.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+  <ion-item no-lines text-right>
+    <button ion-button (click)="goToSlide()" color="violet">Pular Slide</button>
+  </ion-item>
+</ion-content>

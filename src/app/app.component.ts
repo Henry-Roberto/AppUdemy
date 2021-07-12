@@ -1,3 +1,8 @@
+import { TestePdfPage } from './../pages/teste-pdf/teste-pdf';
+import { CameraPage } from './../pages/camera/camera';
+import { EstilizacaoPage } from './../pages/estilizacao/estilizacao';
+import { PopoverPage } from './../pages/popover/popover';
+import { SlidesPage } from './../pages/slides/slides';
 import { ModalPrincipalPage } from './../pages/modal-principal/modal-principal';
 import { HomeContactPage } from './../pages/home-contact/home-contact';
 import { StoragePage } from './../pages/storage/storage';
@@ -39,7 +44,7 @@ import { BadgesPage } from './../pages/badges/badges';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage; // HomePage ion
+  rootPage: any = TestePdfPage; // HomePage ion
 
   pages: Array<{title: string, component: any}>;
 
@@ -73,9 +78,14 @@ export class MyApp {
       { title: 'Tabs', component: TabsPage},
       { title: 'Select', component: SelectPage},
       { title: 'Navegação', component: PaginaPrincipalPage},
-      { title: 'StoragePage', component: StoragePage},
-      { title: 'HomeContactPage', component: HomeContactPage},
-      { title: 'ModalPrincipalPage', component: ModalPrincipalPage},
+      { title: 'Storage', component: StoragePage},
+      { title: 'HomeContact', component: HomeContactPage},
+      { title: 'ModalPrincipal', component: ModalPrincipalPage},
+      { title: 'Slides', component: SlidesPage},
+      { title: 'Popover', component: PopoverPage},
+      { title: 'Estilizacao', component: EstilizacaoPage},
+      { title: 'Camera', component: CameraPage},
+      { title: 'Teste PDF', component: TestePdfPage}
 
     ];
 

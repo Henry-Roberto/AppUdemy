@@ -9,34 +9,10 @@ exports.__esModule = true;
 exports.HomeContactPage = void 0;
 var core_1 = require("@angular/core");
 var ionic_angular_1 = require("ionic-angular");
+// import { ContactProvider, Contact, ContactList} from '../../providers/contact/contact';
 var HomeContactPage = /** @class */ (function () {
-    function HomeContactPage(navCtrl, contactProvider, toastCtrl) {
-        this.navCtrl = navCtrl;
-        this.contactProvider = contactProvider;
-        this.toastCtrl = toastCtrl;
+    function HomeContactPage() {
     }
-    HomeContactPage.prototype.ionViewDidEnter = function () {
-        var _this = this;
-        this.contactProvider.getAll()
-            .then(function (results) {
-            _this.contacts = results;
-        });
-    };
-    HomeContactPage.prototype.addContact = function () {
-        this.navCtrl.push('EditContactPage');
-    };
-    HomeContactPage.prototype.editContact = function (item) {
-        this.navCtrl.push('EditContactPage', { key: item.key, contact: item.contact });
-    };
-    HomeContactPage.prototype.removeContact = function (item) {
-        var _this = this;
-        this.contactProvider.remove(item.key)
-            .then(function () {
-            var index = _this.contacts.indexOf(item);
-            _this.contacts.slice(index, 1);
-            _this.toastCtrl.create({ message: 'Contato removido.', duration: 3000, position: 'botton' }).present();
-        });
-    };
     HomeContactPage = __decorate([
         ionic_angular_1.IonicPage(),
         core_1.Component({

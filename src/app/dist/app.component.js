@@ -7,6 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 exports.MyApp = void 0;
+var teste_pdf_1 = require("./../pages/teste-pdf/teste-pdf");
+var camera_1 = require("./../pages/camera/camera");
+var estilizacao_1 = require("./../pages/estilizacao/estilizacao");
+var popover_1 = require("./../pages/popover/popover");
+var slides_1 = require("./../pages/slides/slides");
 var modal_principal_1 = require("./../pages/modal-principal/modal-principal");
 var home_contact_1 = require("./../pages/home-contact/home-contact");
 var storage_1 = require("./../pages/storage/storage");
@@ -42,7 +47,7 @@ var MyApp = /** @class */ (function () {
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
-        this.rootPage = home_1.HomePage; // HomePage ion
+        this.rootPage = teste_pdf_1.TestePdfPage; // HomePage ion
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
@@ -71,9 +76,14 @@ var MyApp = /** @class */ (function () {
             { title: 'Tabs', component: tabs_1.TabsPage },
             { title: 'Select', component: select_1.SelectPage },
             { title: 'Navegação', component: pagina_principal_1.PaginaPrincipalPage },
-            { title: 'StoragePage', component: storage_1.StoragePage },
-            { title: 'HomeContactPage', component: home_contact_1.HomeContactPage },
-            { title: 'ModalPrincipalPage', component: modal_principal_1.ModalPrincipalPage },
+            { title: 'Storage', component: storage_1.StoragePage },
+            { title: 'HomeContact', component: home_contact_1.HomeContactPage },
+            { title: 'ModalPrincipal', component: modal_principal_1.ModalPrincipalPage },
+            { title: 'Slides', component: slides_1.SlidesPage },
+            { title: 'Popover', component: popover_1.PopoverPage },
+            { title: 'Estilizacao', component: estilizacao_1.EstilizacaoPage },
+            { title: 'Camera', component: camera_1.CameraPage },
+            { title: 'Teste PDF', component: teste_pdf_1.TestePdfPage }
         ];
     }
     MyApp.prototype.initializeApp = function () {

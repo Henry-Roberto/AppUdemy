@@ -7,6 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 exports.AppModule = void 0;
+var document_viewer_1 = require("@ionic-native/document-viewer");
+var teste_pdf_1 = require("./../pages/teste-pdf/teste-pdf");
+var camera_1 = require("../pages/camera/camera");
+var sms_1 = require("@ionic-native/sms");
+var estilizacao_1 = require("./../pages/estilizacao/estilizacao");
+var popover_1 = require("./../pages/popover/popover");
+var slides_1 = require("./../pages/slides/slides");
 var modal_principal_1 = require("./../pages/modal-principal/modal-principal");
 var modal_conteudo_1 = require("./../pages/modal-conteudo/modal-conteudo");
 var home_contact_1 = require("./../pages/home-contact/home-contact");
@@ -46,7 +53,6 @@ var badges_1 = require("./../pages/badges/badges");
 var botoes_1 = require("./../pages/botoes/botoes");
 var card_1 = require("./../pages/card/card");
 var cep_2 = require("../providers/cep/cep");
-var storage_2 = require("@ionic/storage");
 var common_1 = require("@angular/common"); //FORMATAR OS DADOS
 var contact_1 = require("../providers/contact/contact");
 var AppModule = /** @class */ (function () {
@@ -86,13 +92,17 @@ var AppModule = /** @class */ (function () {
                 storage_1.StoragePage,
                 home_contact_1.HomeContactPage,
                 modal_conteudo_1.ModalConteudoPage,
-                modal_principal_1.ModalPrincipalPage
+                modal_principal_1.ModalPrincipalPage,
+                slides_1.SlidesPage,
+                popover_1.PopoverPage,
+                estilizacao_1.EstilizacaoPage,
+                camera_1.CameraPage,
+                teste_pdf_1.TestePdfPage
             ],
             imports: [
                 platform_browser_1.BrowserModule,
                 http_1.HttpClientModule,
                 ionic_angular_1.IonicModule.forRoot(app_component_1.MyApp, { mode: 'ios' }),
-                storage_2.IonicStorageModule.forRoot()
             ],
             bootstrap: [ionic_angular_1.IonicApp],
             entryComponents: [
@@ -127,7 +137,12 @@ var AppModule = /** @class */ (function () {
                 storage_1.StoragePage,
                 home_contact_1.HomeContactPage,
                 modal_conteudo_1.ModalConteudoPage,
-                modal_principal_1.ModalPrincipalPage
+                modal_principal_1.ModalPrincipalPage,
+                slides_1.SlidesPage,
+                popover_1.PopoverPage,
+                estilizacao_1.EstilizacaoPage,
+                camera_1.CameraPage,
+                teste_pdf_1.TestePdfPage
             ],
             providers: [
                 status_bar_1.StatusBar,
@@ -135,7 +150,9 @@ var AppModule = /** @class */ (function () {
                 { provide: core_1.ErrorHandler, useClass: ionic_angular_1.IonicErrorHandler },
                 cep_2.CepProvider,
                 contact_1.ContactProvider,
-                common_1.DatePipe
+                common_1.DatePipe,
+                sms_1.SMS,
+                document_viewer_1.DocumentViewer
             ]
         })
     ], AppModule);

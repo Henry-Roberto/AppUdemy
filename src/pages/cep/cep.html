@@ -1,11 +1,18 @@
-<ion-header>
-  <ion-toolbar color="violet">
-    <ion-title>Busca CEP</ion-title>    
+<ion-header text-center>
+  <ion-toolbar>
+      <ion-chip>
+        <ion-icon name="locate" color="secondary"></ion-icon>
+        <ion-label>Busca CEP</ion-label>
+      </ion-chip>   
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding-left>
   <ion-list>
+    <!-- <ion-chip color="primary">
+      <ion-icon name="heart" color="danger"></ion-icon>
+      <ion-label>Teste</ion-label>
+    </ion-chip> -->
     <ion-item >
       <ion-label stacked>Cep</ion-label>
       <ion-input id="test" type="text" [(ngModel)]="cepDigitado" placeholder="Digite um cep válido" autofocus="true"></ion-input>
