@@ -6,7 +6,23 @@
 </ion-header>
 
 <ion-content padding>
+  {{teste}}
+  <!--  pc -->
+  <span *ngIf="teste == false">  
+    <embed src="https://araucariageneticabovina.com.br/arquivos/servico/pdfServico_57952bf8ca7af_24-07-2016_17-58-32.pdf" width="760" height="500" type='application/pdf'>
+  </span>
+  <!--  celular -->
+  <span *ngIf="teste == true" [ngClass]="teste == true ? 'conteiner-pdf' : ''">  
+    <iframe src="https://araucariageneticabovina.com.br/arquivos/servico/pdfServico_57952bf8ca7af_24-07-2016_17-58-32.pdf" width="150" height="100" style="border: none; border-radius: 8px; color: white;"></iframe>
+  </span>
+
   <img src="../../assets/METODOLOGIA.pdf" alt="">
-  <button ion-button (click)="openPdf()">Abrir PDF</button>
-  <div #viewer class="webviewer"></div>
+
+
+  <button ion-button (click)="testeee()">Abrir PDF</button>
+  <!-- <object data="https://americalatina.dint.fgv.br/sites/americalatina.dint.fgv.br/files/teste33.pdf" type="application/pdf"  width="600" height="780" style="border: none;">
+    <p>Seu navegador não tem um plugin pra PDF</p>
+  </object> -->
 </ion-content>
+
+

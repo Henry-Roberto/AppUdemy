@@ -1,7 +1,8 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
+
 // import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
-import WebViewer from '@pdftron/webviewer';
+// import WebViewer from '@pdftron/webviewer';
 
 @IonicPage()
 @Component({
@@ -10,21 +11,24 @@ import WebViewer from '@pdftron/webviewer';
 })
 
 export class TestePdfPage {
-  @ViewChild('viewer') viewerRef: ElementRef;
-
+  // @ViewChild('viewer') viewerRef: ElementRef;
+  private teste: boolean = false;
   constructor(//private document: DocumentViewer,
               ) {
   }
 
-  ngAfterViewInit(): void {
-    WebViewer({
-      path: '../../assets/lib',
-      initialDoc: '../../assets/METODOLOGIA.pdf'
-    }, this.viewerRef.nativeElement).then(instance =>{
-    });
-  }
+  // ngAfterViewInit(): void {
+  //   WebViewer({
+  //     path: '../../assets/lib',
+  //     initialDoc: '../../assets/METODOLOGIA.pdf'
+  //   }, this.viewerRef.nativeElement).then(instance =>{
+  //   });
+  // }
 
   ionViewDidLoad() {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        this.teste = true;
+     }
   }
 
   // openPdf(){

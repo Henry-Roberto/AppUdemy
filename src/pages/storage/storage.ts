@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
+// import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -10,7 +10,7 @@ import { Storage } from '@ionic/storage';
 export class StoragePage {
   public ultimoBotaoPressionado: any;
 
-  constructor(private storage: Storage) {
+  constructor() {
   }
 
   // ionViewDidLoad() {
