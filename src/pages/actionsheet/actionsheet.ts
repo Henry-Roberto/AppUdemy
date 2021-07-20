@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActionSheet, ActionSheetController, IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ActionSheetController, IonicPage} from 'ionic-angular';
 
 @IonicPage()
 @Component({

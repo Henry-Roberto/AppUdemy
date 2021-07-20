@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component} from '@angular/core';
 import { IonicPage } from 'ionic-angular';
 
 // import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
@@ -12,7 +12,7 @@ import { IonicPage } from 'ionic-angular';
 
 export class TestePdfPage {
   // @ViewChild('viewer') viewerRef: ElementRef;
-  private teste: boolean = false;
+  teste: boolean = false;
   constructor(//private document: DocumentViewer,
               ) {
   }

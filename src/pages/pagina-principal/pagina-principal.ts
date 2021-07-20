@@ -1,7 +1,7 @@
 import { Pagina2Page } from './../pagina2/pagina2';
 import { Pagina1Page } from './../pagina1/pagina1';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -10,7 +10,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PaginaPrincipalPage {
 
-  constructor(private navCtrl: NavController, private navParams: NavParams) {
+  constructor(private navCtrl: NavController) {
   }
 
   ionViewDidLoad() {

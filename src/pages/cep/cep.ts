@@ -8,8 +8,8 @@ import { IonicPage, LoadingController, ToastController} from 'ionic-angular';
   templateUrl: 'cep.html',
 })
 export class CepPage {
-  private cepDigitado : string;
-  private infoCep : any = [{}];
+  cepDigitado : string;
+  infoCep : any = [{}];
   constructor(private CepProvider : CepProvider,
               private loadingCtrl : LoadingController,
               private toastCtrl   : ToastController) {

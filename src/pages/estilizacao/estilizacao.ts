@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 import { SMS } from '@ionic-native/sms';
 
 
@@ -10,7 +10,7 @@ import { SMS } from '@ionic-native/sms';
 })
 export class EstilizacaoPage {
 
-  private enviado: boolean = false;
+  enviado: boolean = false;
   constructor(private sms: SMS) { }
 
 

@@ -8,5 +8,8 @@
 <ion-content padding>
   <button tooltip="I'm a tooltip below a button" positionV="bottom" (click)="tirarFoto()" ion-button block>TIRAR FOTO</button>
 
-  <img [hidden]="!foto" src="{{foto}}" alt="">
+  <ion-card>
+    <img src="{{foto}}"/>
+  </ion-card>
+
 </ion-content>

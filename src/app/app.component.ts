@@ -1,3 +1,7 @@
+import { LazyLoadPage } from './../pages/lazy-load/lazy-load';
+import { AnimacaoPage } from './../pages/animacao/animacao';
+import { LocalizacaoPage } from './../pages/localizacao/localizacao';
+import { BarcodePage } from './../pages/barcode/barcode';
 import { TestePdfPage } from './../pages/teste-pdf/teste-pdf';
 import { CameraPage } from './../pages/camera/camera';
 import { EstilizacaoPage } from './../pages/estilizacao/estilizacao';
@@ -44,7 +48,7 @@ import { BadgesPage } from './../pages/badges/badges';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = TestePdfPage; // HomePage ion
+  rootPage: any = HomePage; // HomePage ion
 
   pages: Array<{title: string, component: any}>;
 
@@ -85,8 +89,10 @@ export class MyApp {
       { title: 'Popover', component: PopoverPage},
       { title: 'Estilizacao', component: EstilizacaoPage},
       { title: 'Camera', component: CameraPage},
-      { title: 'Teste PDF', component: TestePdfPage}
-
+      { title: 'Teste PDF', component: TestePdfPage},
+      { title: 'Barcode', component: BarcodePage},
+      { title: 'Localizacao', component: LocalizacaoPage},
+      { title: 'Animacao', component: AnimacaoPage},
     ];
 
   }
@@ -105,5 +111,9 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     // this.nav.setRoot(page.component);
     this.nav.push(page.component);
+  }
+
+  openPageLazyLoad(){
+    this.nav.push('LazyLoadPage');
   }
 }

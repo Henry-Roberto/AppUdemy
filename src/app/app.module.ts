@@ -1,3 +1,7 @@
+import { AnimacaoPage } from './../pages/animacao/animacao';
+import { NativeStorage } from '@ionic-native/native-storage';
+import { LocalizacaoPage } from './../pages/localizacao/localizacao';
+import { BarcodePage } from './../pages/barcode/barcode';
 import { DocumentViewer } from '@ionic-native/document-viewer';
 import { TestePdfPage } from './../pages/teste-pdf/teste-pdf';
 import { CameraPage } from '../pages/camera/camera';
@@ -46,11 +50,11 @@ import { BadgesPage } from './../pages/badges/badges';
 import { BotoesPage } from './../pages/botoes/botoes';
 import { CardPage } from './../pages/card/card';
 import { CepProvider } from '../providers/cep/cep';
-import { from } from 'rxjs/observable/from';
-import { IonicStorageModule } from '@ionic/storage';
 import { DatePipe } from '@angular/common'; //FORMATAR OS DADOS
 import { ContactProvider } from '../providers/contact/contact';
 import { Camera } from '@ionic-native/camera';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -90,7 +94,10 @@ import { Camera } from '@ionic-native/camera';
     PopoverPage,
     EstilizacaoPage,
     CameraPage,
-    TestePdfPage
+    TestePdfPage,
+    BarcodePage,
+    LocalizacaoPage,
+    AnimacaoPage
   ],
   imports: [
     BrowserModule,
@@ -136,7 +143,10 @@ import { Camera } from '@ionic-native/camera';
     PopoverPage,
     EstilizacaoPage,
     CameraPage,
-    TestePdfPage
+    TestePdfPage,
+    BarcodePage,
+    LocalizacaoPage,
+    AnimacaoPage
   ],
   providers: [
     StatusBar,
@@ -146,7 +156,11 @@ import { Camera } from '@ionic-native/camera';
     ContactProvider,
     DatePipe,
     SMS,
-    DocumentViewer
+    DocumentViewer,
+    Camera,
+    BarcodeScanner,
+    Geolocation,
+    NativeStorage
   ]
 })
 export class AppModule {}

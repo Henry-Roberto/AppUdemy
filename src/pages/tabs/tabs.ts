@@ -15,7 +15,7 @@ export class TabsPage {
   cardPage = CardPage;
   segmentPage = SegmentPage;
 
-  private valorBadge : number = 5;
+  valorBadge : number = 5;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

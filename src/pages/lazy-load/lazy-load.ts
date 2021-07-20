@@ -4,12 +4,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-toggle',
-  templateUrl: 'toggle.html',
+  selector: 'page-lazy-load',
+  templateUrl: 'lazy-load.html',
 })
-export class TogglePage {
-
-  teste : boolean = true;
+export class LazyLoadPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-list',
@@ -10,7 +9,7 @@ export class ListPage {
     'Laranja', 'Maça', 'Limão', 'Maracujá', 'Banana'
   ]
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor() {
 
   }
 

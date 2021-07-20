@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-// import { Storage } from '@ionic/storage';
+import { IonicPage } from 'ionic-angular';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 @IonicPage()
 @Component({
@@ -8,29 +8,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'storage.html',
 })
 export class StoragePage {
-  public ultimoBotaoPressionado: any;
+  ultimoBotaoPressionado: any;
 
-  constructor() {
+  constructor(private storage : NativeStorage) {
   }
 
-  // ionViewDidLoad() {
-  //   this.storage.get("ultimoBotaoPressionado").then((valor) => {
-  //   this.ultimoBotaoPressionado = valor;
-  //   });
-  // }
+  ionViewDidLoad() {
+    this.storage.getItem("ultimoBotaoPressionado").then((valor) => {
+    this.ultimoBotaoPressionado = valor;
+    });
+  }
 
-  // botao1(){
-  //   this.storage.set('ultimoBotaoPressionado', 1);
+  botao1(){
+    this.storage.setItem('ultimoBotaoPressionado', 1);
     
-  //   //javascript
-  //   localStorage.setItem('opcao', '1');
-  // }
+    //javascript
+    // localStorage.setItem('opcao', '1');
+  }
 
-  // botao2(){
-  //   this.storage.set('ultimoBotaoPressionado', 2);
+  botao2(){
+    this.storage.setItem('ultimoBotaoPressionado', 2);
 
-  //    //javascript
-  //    localStorage.setItem('opcao', '2');
-  // }
+     //javascript
+    //  localStorage.setItem('opcao', '2');
+  }
 
 }

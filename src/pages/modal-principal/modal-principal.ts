@@ -11,7 +11,7 @@ import { IonicPage, ModalController } from 'ionic-angular';
 })
 export class ModalPrincipalPage {
 
-  private usuarios: any = [{ 
+  usuarios: any = [{ 
     nome: "", 
     idade: 0 
   }];

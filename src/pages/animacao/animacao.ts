@@ -3,16 +3,15 @@ import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-toolbar',
-  templateUrl: 'toolbar.html',
+  selector: 'page-animacao',
+  templateUrl: 'animacao.html',
 })
-export class ToolbarPage {
+export class AnimacaoPage {
 
   constructor() {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ToolbarPage');
   }
 
 }

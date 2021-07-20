@@ -1,8 +1,6 @@
-import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { AlertController, Button, IonicPage, NavController } from 'ionic-angular';
-import { buffer } from 'rxjs/operator/buffer';
-import { Title } from '@angular/platform-browser';
+import { AlertController, IonicPage, NavController } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -59,7 +57,7 @@ export class AlertPage {
     }
 
     inputAlert() {
-        let alert = this.alertCtrl.create(
+        this.alertCtrl.create(
             {
                 title: 'Acesso restrito',
                 inputs: [

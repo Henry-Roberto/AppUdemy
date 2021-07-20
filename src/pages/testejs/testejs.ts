@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ArgumentOutOfRangeError } from 'rxjs';
 
 @IonicPage()
 @Component({
@@ -9,11 +8,12 @@ import { ArgumentOutOfRangeError } from 'rxjs';
 })
 export class TesteJS {
 
+  agora = new Date();
+  agoraconvertido = this.agora.toLocaleDateString("pt-BR")
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  private agora = new Date();
-  private agoraconvertido = this.agora.toLocaleDateString("pt-BR")
   ionViewDidLoad() {
     console.log('ionViewDidLoad TesteJS');
   }

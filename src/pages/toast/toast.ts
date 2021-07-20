@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, ToastController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -15,7 +15,7 @@ export class ToastPage {
   }
 
   showToast(position : string) {
-    let toast = this.toastCtrl.create({
+    this.toastCtrl.create({
       message : 'Dados salvos com sucesso!',
       duration: 2000,
       position: position

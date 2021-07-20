@@ -1,6 +1,6 @@
 import { IconesPage } from './../icones/icones';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
+import { IonicPage, PopoverController } from 'ionic-angular';
 
 
 @IonicPage()

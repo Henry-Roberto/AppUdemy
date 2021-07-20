@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Storage } from '@ionic/storage';
-import { DatePipe } from '@angular/common';
 
 @Injectable()
 export class ContactProvider {
