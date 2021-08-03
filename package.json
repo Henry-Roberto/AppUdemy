@@ -77,12 +77,9 @@
         "ANDROID_SUPPORT_V4_VERSION": "27.+"
       },
       "cordova-plugin-document-viewer": {},
-      "phonegap-plugin-barcodescanner": {
-        "ANDROID_SUPPORT_V4_VERSION": "27.+"
-      },
+      "phonegap-plugin-barcodescanner": {},
       "cordova-plugin-geolocation": {
-        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you",
-        "GPS_REQUIRED": "true"
+        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
       },
       "cordova-plugin-nativestorage": {}
     },
