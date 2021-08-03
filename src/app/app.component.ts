@@ -48,7 +48,7 @@ import { BadgesPage } from './../pages/badges/badges';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage; // HomePage ion
+  rootPage: any = DateTimePage; // HomePage ion
 
   pages: Array<{title: string, component: any}>;
 
@@ -115,5 +115,10 @@ export class MyApp {
 
   openPageLazyLoad(){
     this.nav.push('LazyLoadPage');
+  }
+
+  openFormularioPage(FormularioPage : String){
+    this.nav.push('FormularioPage');
+
   }
 }

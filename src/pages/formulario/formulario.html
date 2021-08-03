@@ -1,0 +1,21 @@
+<ion-content>
+  <ion-grid fixed>
+    <ion-row aling-items-center justify-content-center>
+      <ion-col col-12 col-sm12 col-md-6>
+        <form [formGroup]="form">
+          <ion-list>
+            <ion-item>
+              <ion-label floating><span>Login</span></ion-label>
+              <ion-input type="text" formControlName="login"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating><span>Senha</span></ion-label>
+              <ion-input type="password" formControlName="senha"></ion-input>
+            </ion-item>
+          </ion-list>
+        </form>
+        <button ion-button color="primary" outline block round [disabled]="!form.valid" (click)="autenticarFuncionario()">ENTRAR</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
