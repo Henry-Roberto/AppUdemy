@@ -21,21 +21,23 @@
       <ion-datetime displayFormat="MMM DD YY" [(ngModel)]="event.timeStarts"> </ion-datetime>
     </ion-item>
   </ion-list> -->
-  <ion-list style="width: 300px; height: 300px;">
-    <ion-item *ngFor="let item of data; let iy = index" (click)="abrirAno(iy)"
-      style="width: 200px; background-color: rgb(245, 245, 245); border-radius: 8px;">
-      <p color="primary" ion-text>{{item.ano}}</p>
-      <span *ngIf="data[iy].show">
-        <div style="display: inline-block">
-          <div *ngFor="let item of data[iy].meses;" text-center
-            style=" float: left; background-color: white; border: rgb(186, 186, 186) solid 1px; width: 50px; height: 30px; border-radius: 2px;padding: 3px; margin: 1px;"
-            (click)="ClickMesAno(iy, item)">
-            <p>{{item}}</p>
+  <div style="width:220px; height: 200px; border-radius: 3px; overflow-y: auto; overflow-x: hidden;">
+    <ion-list>
+      <ion-item *ngFor="let item of data; let iy = index" (click)="abrirAno(iy)"
+        style=" background-color: rgb(245, 245, 245); border-radius: 8px; padding: auto;">
+        <p color="primary" ion-text>{{item.ano}}</p>
+        <span *ngIf="data[iy].show">
+          <div style="display: inline-block">
+            <div *ngFor="let item of data[iy].meses;" text-center
+              style=" float: left; background-color: white; border: rgb(216, 216, 216) solid 1px; width: 50px; height: 30px; border-radius: 2px;padding: 3px; margin: 1px;"
+              (click)="ClickMesAno(iy, item)">
+              <p>{{item}}</p>
+            </div>
           </div>
-        </div>
-      </span>
-    </ion-item>
-  </ion-list>
+        </span>
+      </ion-item>
+    </ion-list>
+  </div>
 
 
 
